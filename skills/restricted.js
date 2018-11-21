@@ -9,7 +9,7 @@ module.exports = function (controller) {
 
             convo.ask("What is your favorite color?", [
                 {
-                    pattern: "^blue|green|pink|red|yellow|purple$",
+                    pattern: "^blue|green|pink|red|yellow$",
                     callback: function (response, convo) {
                         convo.say('Cool, I like ' + response.text + ' too!');
                         convo.next();
@@ -25,7 +25,7 @@ module.exports = function (controller) {
 
             // Bad response
             convo.addMessage({
-                text: "Sorry, I don't know this color.<br/>_Tip: try blue, purple, green, pink, red or yellow!_",
+                text: "Sorry, I don't know this color.<br/>_Tip: try blue, green, pink, red or yellow!_",
                 action: 'default',
             }, 'bad_response');
         });
