@@ -9,7 +9,7 @@ module.exports = function (controller) {
 
             convo.ask("What is your favorite color?", [
                 {
-                    pattern: "^blue|green|pink|red|yellow|purple$",
+                    pattern: "^blue|green|pink|red|yellow|brown$",
                     callback: function (response, convo) {
                         convo.say('Cool, I like ' + response.text + ' too!');
                         convo.next();
