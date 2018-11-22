@@ -18,7 +18,6 @@ module.exports = function (controller) {
             question += "<br/> `1)` join a Community Of Interest (**communities**)";
             question += "<br/> `2)` take a Learning Lab (**labs**)";
             question += "<br/> `3)` check Upcoming Events (**events**)";
-            question += "<br/> `4)` Todays Date (**date**)";
             question += "\n\nWhat do you want to do ?<br/>_(type a number, a **bold keyword** or `cancel`)_";
             convo.ask(question, [
                 {
@@ -41,14 +40,6 @@ module.exports = function (controller) {
                         convo.say("Nothing's like meeting in person at a conference, training or a hackathon. Check the list of [DevNet events](https://developer.cisco.com/site/devnet/events-contests/events/) or ask the bot: invite `CiscoDevNet@sparkbot.io` to chat in a Webex Teams space.");
                         convo.next();
                     },
-                }
-                {
-                    pattern: "4|event|date",
-                    callback: function (response, convo) {
-                        convo.say("Today is "+Date()+"");
-                        convo.next();
-                    },
-                }
                 , {
                     pattern: "cancel|stop",
                     callback: function (response, convo) {
