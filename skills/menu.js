@@ -40,6 +40,7 @@ module.exports = function (controller) {
                         convo.say("Nothing's like meeting in person at a conference, training or a hackathon. Check the list of [DevNet events](https://developer.cisco.com/site/devnet/events-contests/events/) or ask the bot: invite `CiscoDevNet@sparkbot.io` to chat in a Webex Teams space.");
                         convo.next();
                     },
+                }
                 , {
                     pattern: "cancel|stop",
                     callback: function (response, convo) {
